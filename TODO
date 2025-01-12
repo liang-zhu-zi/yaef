@@ -1,0 +1,26 @@
+# TODO
+
+C++.
+
+* Arduino
+* Linux
+* ESP-IDF
+
+Some examples.
+
+## Components
+1. XTransfer：Transfer A to B
+2. XFront: Pre-processing
+3. XRear: Post-processing
+4. XBridge:
+    * (FreeRTOS/Arduino/ESP-IDF) Queue
+    * (ESP-IDF) MQTT, UART, ...
+    * (Linux) Unix Domain/Queue/FIFO， TCP/UDP, tty, ...
+
+## Network
+* Client
+  1. ThingsBoard MQTT
+
+* Server
+  1. BACnet MS/TP
+  2. Modubus RTU

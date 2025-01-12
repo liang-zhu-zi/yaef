@@ -17,7 +17,7 @@ private:
     bool changed; // value changed
     bool updated; // value updated - XData notified
 
-    XSet* m_pSet;
+    XSet* set;
 };
 
 class XEvent
@@ -51,12 +51,12 @@ public:
 private:
     void dispatch(XEvent* pEvent, XData* pData);
 
-    std::list<XEvent*> m_events;
-    std::list<XData*> m_datas;
-    std::map<XEvent*, std::list<XData*> > m_eventDataMap;
-    std::map<XData*, std::list<XEvent*> > m_dataEventMap;
-    std::map<XData*, std::list<XData*> > m_dataSubDataMap;
-    std::map<XData*, std::list<XData*> > m_subDataDataMap;
+    std::list<XEvent*> events;
+    std::list<XData*> datas;
+    std::map<XEvent*, std::list<XData*> > eventDataMap;
+    std::map<XData*, std::list<XEvent*> > dataEventMap;
+    std::map<XData*, std::list<XData*> > dataSubDataMap;
+    std::map<XData*, std::list<XData*> > subDataDataMap;
 };
 
 #endif // __YAEF_H__

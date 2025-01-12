@@ -1,0 +1,52 @@
+@startuml
+
+Abstract XSet {
+ -events
+ -datas
+ -oberserve{event, data, ...}
+ +add(event)
+ +add(data)
+ +add(parent, data)
+ +subscribe(event, data, ...)
+ +notify(event, data, ...)
+ -dispath()
+}
+
+Abstract XEvent {
+
+}
+
+Abstract XData {
+ -changed
+ -updated
+ -subData
+ +isChanged()
+ +isUpdate()
+ +reset()
+}
+
+XSet "1" *-- "0..n" XEvent: include
+XSet "1" *-- "0..n" XData: include
+XEvent "0..n" -- "0..n" XData
+
+
+
+' abstract        abstract
+' abstract class  "abstract class"
+' annotation      annotation
+' circle          circle
+' ()              circle_short_form
+' class           class
+' class           class_stereo  <<stereotype>>
+' diamond         diamond
+' <>              diamond_short_form
+' entity          entity
+' enum            enum
+' exception       exception
+' interface       interface
+' metaclass       metaclass
+' protocol        protocol
+' stereotype      stereotype
+' struct          struct
+
+@enduml
